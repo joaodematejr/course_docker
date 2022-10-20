@@ -32,3 +32,10 @@ docker run <id>
 
 docker run -d -p 3000:3000 b7b736ee99e0
 
+docker pull python
+
+docker run --help
+
+docker tag b7b736ee99e0 teste_name
+
+docker build -t meunome_diferente .
