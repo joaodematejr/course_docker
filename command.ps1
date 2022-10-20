@@ -39,3 +39,7 @@ docker run --help
 docker tag b7b736ee99e0 teste_name
 
 docker build -t meunome_diferente .
+
+docker start -i meunome_diferente
+
+docker rmi <id> -f
