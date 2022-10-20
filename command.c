@@ -26,3 +26,9 @@ docker logs <id>
 
 docker rm <id> or docker rm <id> -f
 
+docker build 
+
+docker run <id>
+
+docker run -d -p 3000:3000 b7b736ee99e0
+
