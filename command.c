@@ -14,13 +14,13 @@ docker run nginx
 
 docker run -d nginx 
 
-docker run -d -p <port>:<port> nginx 
+docker run -d -p <my_port>:<port> nginx 
 
-docker run -d -p <port_person>:<port> nginx 
+docker run -d -p <my_port>:<port> nginx 
 
 docker start id
 
-docker run -d -p <port_person>:<port> --name <name_img> nginx 
+docker run -d -p <my_port>:<port> --name <name_img> nginx 
 
 docker logs <id>
 
