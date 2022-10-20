@@ -43,3 +43,22 @@ docker build -t meunome_diferente .
 docker start -i meunome_diferente
 
 docker rmi <id> -f
+
+docker system prune
+
+docker run --rm <container>
+
+docker cp 
+
+docker top <container>
+
+docker inspect <container>
+
+docker stats
+
+docker login
+
+docker logout
+
+
+
