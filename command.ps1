@@ -60,5 +60,7 @@ docker login
 
 docker logout
 
+docker volume ls
 
+docker inspect <container>
 
