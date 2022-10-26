@@ -69,3 +69,5 @@ docker volume create <name>
 docker volume prune
 
 docker :ro - read only
+
+docker network ls
