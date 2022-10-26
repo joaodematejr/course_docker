@@ -64,3 +64,4 @@ docker volume ls
 
 docker inspect <container>
 
+docker volume create <name>
