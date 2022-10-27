@@ -71,3 +71,20 @@ docker volume prune
 docker :ro - read only
 
 docker network ls
+
+docker network create 2minharedeteste
+
+docker network create -d macvlan 2minharedeteste
+
+docker network create -d macvlan --subnet=
+
+docker network rm <id>
+
+docker network inspect <id>
+
+docker network connect <id> <container>
+
+docker network disconnect <id> <container>
+
+docker network prune
+
