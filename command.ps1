@@ -88,3 +88,11 @@ docker network disconnect <id> <container>
 
 docker network prune
 
+docker network connect <id> <container>
+
+docker network disconnect <id> <container>
+
+docker network inspect <id>
+
+
+
