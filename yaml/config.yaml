@@ -1,0 +1,37 @@
+# Instruction para o program
+nome: "João"
+idade: 30 # Essa idade de program
+
+# esse objeto description 
+objeto:
+  versao: 2
+  arquivo: "teste.txt"
+
+versao: 2
+versao_completa: 3.14
+
+string_sem_aspas: "digite aqui texto aqui"
+texto: "Este também e um texto valido para o YAML"
+
+nulo: ~
+nulo_dois: null
+
+verdadeiro: True
+verdadeiro_dois: On
+
+falso: False
+falso_dois: Off
+
+lista: [1, 2, 3, 4, 5, 6]
+
+lista_dois:
+  - "list"
+  - 10
+  - outro "teste.txt"
+  - True
+
+obj: {a: 1, b: 2, c: 3, d: 4, e: 5}
+
+objetos:
+  a: 1
+  b: 2
