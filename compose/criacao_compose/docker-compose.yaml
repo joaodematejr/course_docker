@@ -1,0 +1,29 @@
+version: '3.3'
+
+services:
+  db: #CONTAINER DE MYSQL
+    image: 'mysql:5.7' #FROM mysql: 5.7
+    volumes:
+      - 'db_data:/var/lib/mysql' #VOLUME DO MYSQL
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 'wordpress' #USUARIO ROOT
+      MYSQL_DATABASE: 'wordpress' #NOME DA BASE DE DADOS
+      MYSQL_USER: 'joao' #USUARIO
+      MYSQL_PASSWORD: 'secret' #SENHA
+
+  wordpress: #CONTAINER DO WORDPRESS
+    depends_on:
+      - db #DEPENDENCIA DO MYSQL
+    image: 'wordpress:latest' #FROM wordpress:latest
+    ports:
+      - '8000:80' #PORTA DO WORDPRESS
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306 #HOST DO MYSQL
+      WORDPRESS_DB_USER: joao #USUARIO DO MYSQL
+      WORDPRESS_DB_PASSWORD: secret #SENHA DO MYSQL
+      WORDPRESS_DB_NAME: wordpress #NOME DA BASE DE DADOS
+     
+volumes:
+  db_data: {} #VOLUME DO MYSQL

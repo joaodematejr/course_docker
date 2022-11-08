@@ -94,5 +94,5 @@ docker network disconnect <id> <container>
 
 docker network inspect <id>
 
-
+docker compose up
 
