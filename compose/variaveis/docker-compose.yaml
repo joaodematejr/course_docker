@@ -1,0 +1,23 @@
+version: '3.3'
+
+services:
+  db: #CONTAINER DE MYSQL
+    image: 'mysql:5.7' #FROM mysql: 5.7
+    volumes:
+      - 'db_data:/var/lib/mysql' #VOLUME DO MYSQL
+    restart: always
+    env_file:
+      - ./config/db.env #ARQUIVO DE CONFIGURAÇÃO DO MYSQL
+  wordpress: #CONTAINER DO WORDPRESS
+    depends_on:
+      - db #DEPENDENCIA DO MYSQL
+    image: 'wordpress:latest' #FROM wordpress:latest
+    ports:
+      - '8000:80' #PORTA DO WORDPRESS
+    restart: always
+    env_file:
+      - ./config/wp.env #ARQUIVO DE CONFIGURAÇÃO DO WORDPRESS
+
+     
+volumes:
+  db_data: {} #VOLUME DO MYSQL

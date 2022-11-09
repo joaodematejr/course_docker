@@ -96,3 +96,6 @@ docker network inspect <id>
 
 docker compose up
 
+docker compose up -d
+
+docker compose down
