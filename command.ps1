@@ -101,3 +101,29 @@ docker compose up -d
 docker compose down
 
 docker-compose ps
+
+#TOKEB PARA JOIN NO CLUSTER
+docker swarm join-token manager
+
+docker info
+
+docker swarm leave
+
+docker node rm <id>
+
+docker service inspect <id>
+
+docker service ps <id>
+
+docker stack deploy -c docker-compose.yml <name>
+
+docker service scale <name>=<number>
+
+docker node update --availabuliity drain <id>
+
+docker service update --image <image> <id>
+
+docker network create --driver overlay swarm
+
+docker ser --network-add swarm pkjpk
+
