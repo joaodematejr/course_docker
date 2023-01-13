@@ -1,4 +1,6 @@
 choco install kubernetes-cli
 choco install minikube
 
-minikube start --drive=docker
+minikube start --driver=docker
+
+minikube start --force --driver=docker
