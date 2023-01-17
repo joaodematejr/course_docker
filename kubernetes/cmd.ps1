@@ -57,5 +57,22 @@ kubectl get deployments
 
 kubectl delete deployment flask-deployment
 
+kubectl apply -f flask.yaml
+
+kubectl delete -f flask.yaml
+
+kubectl apply -f flask-service.yaml
+
+sudo kubectl get services
+
+minikube service flask-service
+
+# Path: kubernetes/flask.yaml
+
+kubectl delete -f flask-service.yaml
+
+docker build -t joaodematejr/flask-hub-projeto5 .
+
+docker push joaodematejr/flask-hub-projeto5
 
 
