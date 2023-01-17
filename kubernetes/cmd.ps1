@@ -28,3 +28,34 @@ kubectl get pods
 kubectl describe pod
 
 kubectl config view
+
+kubectl expose deployment
+
+kubectl expose deployment flask-deployment --type=LoadBalancer --port=5000
+
+minikube service flask-deployment
+
+kubectl get services
+
+kubectl describe services/flask-deployment
+
+kubectl scale deployment flask-deployment --replicas=3
+
+kubectl get pods
+
+kubectl get rs
+
+kubectl set image deployment/flask-deployment flask-hub=joaodematejr/flask-hub-projeto:v2
+
+kubectl rollout status deployment/flask-deployment
+
+kubectl rollout undo deployment/flask-deployment
+
+kubectl delete service flask-deployment
+
+kubectl get deployments
+
+kubectl delete deployment flask-deployment
+
+
+

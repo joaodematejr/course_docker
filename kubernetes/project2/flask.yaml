@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-app-depoyment
+spec:
+  replicas: 4
+  selector: 
+    matchLabels:
+      app: flask-app
+  template:
+    metadata:
+      app: flask-app
+    spec:
+      containers:
+       - name: flask
+         image: joaodematejr/flask-hub-projeto
+
+
